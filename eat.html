@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ปทุมธานี</title>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script>
+//Here you can add your own picture for snow. Just change the url
+var snowsrc="bgflower1.gif"
+//how many snowflakes there will be (currently 12)
+var no =17;
+//How fast will the snow disappear (0 is never)
+var hidesnowtime = 0;
+//The height the snow will reach before it disappears ("windowheight" or "pageheight")
+var snowdistance = "pageheight";
+///////////////////////////////End of Settings///////////////////////////////////
+var ie4up = (document.all) ? 1 : 0;
+var ns6up = (document.getElementById&&!document.all) ? 1 : 0;
+function iecompattest()
+{
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+var dx, xp, yp;
+var am, stx, sty;
+var i, doc_width = 800, doc_height = 600;
+if (ns6up)
+{
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+}
+else
+if (ie4up)
+{
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+dx = new Array();
+xp = new Array();
+yp = new Array();
+am = new Array();
+stx = new Array();
+sty = new Array();
+for (i = 0; i < no; ++ i)
+{
+dx[i] = 0;
+xp[i] = Math.random()*(doc_width-50);
+yp[i] = Math.random()*doc_height;
+am[i] = Math.random()*20;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+if (ie4up||ns6up)
+{
+if (i == 0)
+{
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><a href=\"http://rftactical.darkbb.com/index.htm\"><img src='"+snowsrc+"' border=\"0\"><\/a><\/div>");
+}
+else
+{
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='"+snowsrc+"' border=\"0\"><\/div>");
+}
+}
+}
+function snowIE_NS6()
+{
+doc_width = ns6up?window.innerWidth-10 : iecompattest().clientWidth-10;
+doc_height=(window.innerHeight && snowdistance=="windowheight")? window.innerHeight : (ie4up && snowdistance=="windowheight")? iecompattest().clientHeight : (ie4up && !window.opera && snowdistance=="pageheight")? iecompattest().scrollHeight : iecompattest().offsetHeight;
+for (i = 0; i < no; ++ i)
+{
+yp[i] += sty[i];
+if (yp[i] > doc_height-50)
+{
+xp[i] = Math.random()*(doc_width-am[i]-30);
+yp[i] = 0;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+}
+dx[i] += stx[i];
+document.getElementById("dot"+i).style.top=yp[i]+"px";
+document.getElementById("dot"+i).style.left=xp[i] + am[i]*Math.sin(dx[i])+"px";
+}
+snowtimer=setTimeout("snowIE_NS6()", 10);
+}
+function hidesnow()
+{
+if (window.snowtimer) clearTimeout(snowtimer)
+for (i=0; i<no; i++) document.getElementById("dot"+i).style.visibility="hidden"
+}
+
+if (ie4up||ns6up)
+{
+snowIE_NS6();
+if (hidesnowtime>0)
+setTimeout("hidesnow()", hidesnowtime*1000)
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('หน้าแรก2.png','ประวัติ2.png','สถาน2.png','อาหาร2.png','sidemap2.png','คณะ2.png','มทร2.png')">
+<table width="988" border="0" align="center" cellpadding="1" cellspacing="1">
+  <tr>
+    <td width="984" height="200" align="center"><p><a id="t"></a><img src="ปก2.jpg" width="964" height="336"></p></td>
+  </tr>
+  <tr>
+    <td height="600"><table width="969" border="0" cellspacing="1" cellpadding="1">
+      <tr valign="top">
+        <td width="204" height="813"><table width="203" height="810" border="0" cellpadding="1" cellspacing="1">
+          <tr>
+            <td width="199" height="113" valign="top" bgcolor="#FFFFFF"><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','หน้าแรก2.png',1)"><img src="หน้าแรก.png" name="Image2" width="200" height="111" id="Image2"></a></td>
+          </tr>
+          <tr>
+            <td height="114" valign="top" bgcolor="#FFFFFF"><a href="pw.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','ประวัติ2.png',1)"><img src="ประวัติ.png" name="Image3" width="200" height="111" id="Image3"></a></td>
+          </tr>
+          <tr>
+            <td height="117" valign="top" bgcolor="#FFFFFF"><a href="tavel.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','สถาน2.png',1)"><img src="สถาน.png" name="Image4" width="200" height="111" id="Image4"></a></td>
+          </tr>
+          <tr>
+            <td height="114" valign="top" bgcolor="#FFFFFF"><a href="eat.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','อาหาร2.png',1)"><img src="อาหาร.png" name="Image5" width="200" height="111" id="Image5"></a></td>
+          </tr>
+          <tr>
+            <td height="113" valign="top" bgcolor="#FFFFFF"><a href="sitemap.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','sidemap2.png',1)"><img src="sidemap.png" name="Image6" width="200" height="111" id="Image6"></a></td>
+          </tr>
+          <tr>
+            <td height="117" valign="top" bgcolor="#FFFFFF"><a href="https://bus.rmutp.ac.th/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','คณะ2.png',1)"><img src="คณะ.png" name="Image7" width="200" height="111" id="Image7"></a></td>
+          </tr>
+          <tr>
+            <td height="114" valign="top" bgcolor="#FFFFFF"><a href="https://www.rmutp.ac.th/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','มทร2.png',1)"><img src="มทร.png" name="Image8" width="200" height="111" id="Image8"></a></td>
+          </tr>
+        </table>
+          <table width="201" height="119" border="0" align="left" cellpadding="1" cellspacing="1">
+            <tr>
+              <td width="197" align="center"><SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+monthnames = new Array(
+"January",
+"Februrary",
+"March",
+"April",
+"May",
+"June",
+"July",
+"August",
+"September",
+"October",
+"November",
+"Decemeber");
+var linkcount=0;
+function addlink(month, day, href) {
+var entry = new Array(3);
+entry[0] = month;
+entry[1] = day;
+entry[2] = href;
+this[linkcount++] = entry;
+}
+Array.prototype.addlink = addlink;
+linkdays = new Array();
+monthdays = new Array(12);
+monthdays[0]=31;
+monthdays[1]=28;
+monthdays[2]=31;
+monthdays[3]=30;
+monthdays[4]=31;
+monthdays[5]=30;
+monthdays[6]=31;
+monthdays[7]=31;
+monthdays[8]=30;
+monthdays[9]=31;
+monthdays[10]=30;
+monthdays[11]=31;
+todayDate=new Date();
+thisday=todayDate.getDay();
+thismonth=todayDate.getMonth();
+thisdate=todayDate.getDate();
+thisyear=todayDate.getYear();
+thisyear = thisyear % 100;
+thisyear = ((thisyear < 50) ? (2000 + thisyear) : (1900 + thisyear));
+if (((thisyear % 4 == 0) 
+&& !(thisyear % 100 == 0))
+||(thisyear % 400 == 0)) monthdays[1]++;
+startspaces=thisdate;
+while (startspaces > 7) startspaces-=7;
+startspaces = thisday - startspaces + 1;
+if (startspaces < 0) startspaces+=7;
+document.write("<table border=2 bgcolor=white ");
+document.write("bordercolor=black><font color=black>");
+document.write("<tr><td colspan=7><center><strong>" 
++ monthnames[thismonth] + " " + thisyear 
++ "</strong></center></font></td></tr>");
+document.write("<tr>");
+document.write("<td align=center>Su</td>");
+document.write("<td align=center>M</td>");
+document.write("<td align=center>Tu</td>");
+document.write("<td align=center>W</td>");
+document.write("<td align=center>Th</td>");
+document.write("<td align=center>F</td>");
+document.write("<td align=center>Sa</td>"); 
+document.write("</tr>");
+document.write("<tr>");
+for (s=0;s<startspaces;s++) {
+document.write("<td> </td>");
+}
+count=1;
+while (count <= monthdays[thismonth]) {
+for (b = startspaces;b<7;b++) {
+linktrue=false;
+document.write("<td>");
+for (c=0;c<linkdays.length;c++) {
+if (linkdays[c] != null) {
+if ((linkdays[c][0]==thismonth + 1) && (linkdays[c][1]==count)) {
+document.write("<a href=\"" + linkdays[c][2] + "\">");
+linktrue=true;
+      }
+   }
+}
+if (count==thisdate) {
+document.write("<font color='FF0000'><strong>");
+}
+if (count <= monthdays[thismonth]) {
+document.write(count);
+}
+else {
+document.write(" ");
+}
+if (count==thisdate) {
+document.write("</strong></font>");
+}
+if (linktrue)
+document.write("</a>");
+document.write("</td>");
+count++;
+}
+document.write("</tr>");
+document.write("<tr>");
+startspaces=0;
+}
+document.write("</table></p>");
+// End -->
+              </SCRIPT></td>
+            </tr>
+          </table></td>
+        <td width="758"><table width="774" height="462" border="0" align="center" cellpadding="1" cellspacing="1">
+          <tr>
+            <td width="770" align="center"><h2>1.ครัวเรือนเจ้าพระยา</h2>
+              <p><strong>ที่อยู่ : </strong>48 ม.1 ต.กระแชง อ.สามโคก จ.ปทุมธานี 12160<br>
+                <strong>โทรศัพท์ : </strong>0831713304 , 029781144<br>
+                <strong>เปิดทุกวัน </strong>เวลา 10.00 - 22.00 น.</p>
+              <table width="607" border="0" align="center" cellpadding="1" cellspacing="1">
+                <tr>
+                  <td align="center"><img src="2018-06-27.jpg" width="300" height="240"></td>
+                  <td align="center"><img src="unnamed.jpg" width="300" height="240"></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td align="center"><h2><strong>2. </strong><strong>Quayside Cafe &amp; Eatery</strong></h2>
+              <p>ที่อยู่ : 33/5 ม.5 ถ.ติวานนท์ ต.บ้านกลาง อ.เมืองปทุม จ.ปทุมธานี 12000<br>
+                โทรศัพท์ : 0917133292<br>
+                เปิดทุกวัน เวลา 11.00 - 21.00 น. ( ศ- อา ปิด 22.00 น.)</p>
+              <p><img src="quayside1.jpg" width="387" height="251"></p></td>
+          </tr>
+          <tr>
+            <td align="center"><h2><strong>3. The Aileen Café &amp; Restaurant</strong></h2>
+              <p><strong>ที่อยู่ :</strong> 68 ถนนรังสิต-ปทุมธานี ตำบลบางปรอก อำเภอเมือง จังหวัดปทุมธานี 12000<br>
+                <strong>โทร.</strong> 06-4398-8968<br>
+                <strong>เปิดบริการ : </strong>10.00-20.30 น. หยุดวันจันทร์</p>
+              <table width="500" border="0" align="center" cellpadding="1" cellspacing="1">
+                <tr>
+                  <td><img src="5ef45bdd53c5975bc231bab8.jpg" width="300" height="250"></td>
+                  <td><img src="5ef45d296d52115bb9ff1a88.jpg" width="300" height="250"></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td align="center"><h2>4. <strong>ร้านนายเก่งก๋วยเตี๋ยวเนื้อวัวรสเยี่ยม</strong></h2>
+              <p>ที่อยู่ : ถนนรังสิตนครนายก  เรือหน้าหมู่บ้านสินทรัพย์ ลงสะพานเลี้ยวขวา บึงยี่โถ อำเภอธัญบุรี ปทุมธานี 12110<br>
+                โทรศัพท์ : 083-997-7188<br>
+                เปิดบริการ : 08.30-14.00 น. หยุดวันจันทร์</p>
+              <table width="500" border="0" align="center" cellpadding="1" cellspacing="1">
+                <tr>
+                  <td><img src="1612252102_4e5174c4739b80e37fdd3241ee056c58.jpg" width="300" height="250"></td>
+                  <td><img src="1612252031_553193d94e80c003fee3a46403a4826a.jpg" width="300" height="250"></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td align="center"><h2>5. ก๋วยเตี๋ยวหมูต้มยำโบราณ &lsquo;นายทองสุข&rsquo; </h2>
+              <p>ที่อยู่: 122 หมู่2 ตำบลบ้านกลาง อำเภอเมือง  ปทุมธานี 12000<br>
+                โทรศัพท์: 02-598-0208<br>
+                เปิดบริการ : 07.00-15.00  น. หยุดวันจันทร์</p>
+              <p><img src="71f3c749e3b34435bc1f577a72aa618d.jpg" width="300" height="242"></p>
+              <p>&nbsp;</p></td>
+          </tr>
+          <tr>
+            <td align="center"><h2>6. เฮม่า ละลานตากับอาหารฮาลาล</h2>
+              <p>ที่อยู่ : 307 ตำบลบางปรอก อำเภอเมือง ปทุมธานี 12000(ตลาดพูนลาภ) <br>
+                โทรศัพท์ : 081-712-4973<br>
+                เปิดบริการ : 07.30–15.00 น. หยุดวันอาทิตย์</p>
+              <table width="500" border="0" align="center" cellpadding="1" cellspacing="1">
+                <tr>
+                  <td><table width="500" border="0" align="center" cellpadding="1" cellspacing="1">
+                    <tr></tr>
+                    <tr>
+                      <td><img src="960fc96c13cf4c8caec7fe1de9d2cd2e.jpg" width="287" height="216"></td>
+                      <td><img src="ab87cab578694de1856ae6e40d7d0364.jpg" width="252" height="212"></td>
+                    </tr>
+                  </table></td>
+                </tr>
+              </table>
+              <table width="125" height="34" border="0" align="right" cellpadding="1" cellspacing="1">
+              <tr>
+                <td><a href="#t"><img src="—Pngtree—cartoon arrow icon_4604608.png" width="50" height="50" border="0"></a></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td align="center"><a href="https://www.freecounterstat.com" title="website counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=qbs4xfw9k7mr5e9z6qtqje1df7s6h74m" alt="website counter" width="92" height="30" title="website counter" border="0"></a></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="150" align="center">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
